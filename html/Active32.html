@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MVP-Clothes</title>
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+    <style>
+        .MVP-xx-large{ font-size: xx-large;}
+    </style>
+
+        
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+    var socket = io('http://localhost:5318');
+
+    socket.emit("Request Data", {a:0});
+
+    socket.on("Data", function(data){
+        
+    });
+
+    </script>
+<!-- <style type="text/css">
+    *{border:0; padding:0; margin:0;}
+    li{list-style:none;}
+    .wrap{background:blue; width:500px; height:1000px; margin:0 auto;}
+    .list{}
+    .list:after{content:""; display:block; clear:both;}
+    .list li{float:left; width:250px; height:250px; background:red; margin-right:250px;}
+    /* .list li:last-child{margin-right:0;} //html5에서만 가능*/
+    /* .list li + li + li + li + li{margin-right:0;} */
+    .mgr_x{margin-right:0 !important;}
+</style> -->
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <class class="inner-header">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="./Main.html">
+                            <img src="../img/logo.png" style="max-width: 100%; height: auto;">
+                        </a>
+                    </div>
+                </div>
+            </class>
+        </div>
+    </header>
+    <!-- Section -->
+    <section class="banner">
+        <div class='row'>
+            <div class='col-lg-6'>
+                <div class="filter-control">
+                    <h1>Image</h1>
+                </div>
+                <div class="owl-stage-outer">
+
+                    <div class="owl-stage" >
+
+                        <div class="owl-item">
+                            <div class="product-item">
+                                <div class="owl-pic">
+                                    <img src="../img/32.jpg" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-lg-6'>
+                <div class="filter-control">
+                    <div>
+                        <div>
+                            <h1>Information</h1>
+                        </div>
+                        <div class="info-container">
+                            <table border="1" cellpadding="20px">
+                                <tr>
+                                    <td>- Product</td>
+                                    <td colspan="2" id="info-Product">&emsp;라코스테 바람막이</td>
+                                </tr>
+                                <tr>
+                                    <td>- Price</td>
+                                    <td colspan="2" id="info-Price">&emsp;32,900원</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">- Size</td>
+                                    <td>&emsp;S</td><td id="info-Size-S">&nbsp;4EA</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;M</td><td id="info-Size-M">&nbsp;2EA</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;L</td><td id="info-Size-L">&nbsp;3EA</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">- Color</td>
+                                    <td>&emsp;White</td><td id="info-Color-R">&nbsp;2EA</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;Blue</td><td id="info-Color-G">&nbsp;3EA</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;Black</td><td id="info-Color-B">&nbsp;4EA</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">- Fabric</td>
+                                    <td>&emsp;Cotton</td><td id="info-Fabric-Cotton">&nbsp;0%</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;Wool</td><td id="info-Fabric-Linen">&nbsp;0%</td>
+                                </tr>
+                                <tr>
+                                    <td>&emsp;Polyeaster</td><td id="info-Fabric-Wool">&nbsp;100%</td>
+                                </tr>
+                                <tr>
+                                    <td>- Washing Method&emsp;</td>
+                                    <td id="info-Washing" colspan="2">&emsp;Hand Wash & DryClean</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class = "col-lg-12">
+            <div class="slider">
+                <h1>Recommend Item</h1>
+            </div>
+            <div class="product-slider owl-carousel owl-loaded owl-drag">
+
+                <div class="owl-stage-outer">
+
+                    <div class="owl-stage" style="transform: translate3d(); transition : all 1.2s ease 0s; width: auto;">
+
+                        <div class="owl-item">
+                            <div class="product-item">
+                                <div class="owl-pic">
+                                    <img onclick="javascript:location.href='./Active21.html';" src="../img/21.jpg" >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="product-item">
+                                <div class="owl-pic">
+                                    <img onclick="javascript:location.href='./Active23.html';" src="../img/23.jpg"  >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="product-item">
+                                <div class="owl-pic">
+                                    <img onclick="javascript:location.href='./Active25.html';" src="../img/25.jpg"  >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="product-item">
+                                <div class="owl-pic">
+                                    <img onclick="javascript:location.href='./Active26.html';" src="../img/26.jpg"  >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="owl-item">
+                            <div class="product-item">
+                                <div class="owl-pic">
+                                    <img onclick="javascript:location.href='./Active28.html';" src="../img/28.jpg"  >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-main" class="accordion-wrapper-standard" data-module="footer, accordion">
+        <div class="content-inner">
+            <section class="footer-nav row">
+                <div class="footer-section">
+                    <div>
+                        <div>[ Group Info. ]</div>
+                        <ul>
+                            <li>- MVP</li>
+                            <li>&emsp;김회재 kimheojae@naver.com</li>
+                            <li>&emsp;이경민 dlrudals4512@naver.com</li>
+                            <li>&emsp;이두원 brian1051@naver.com</li>
+                            <li>&emsp;이창대 lcd479@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div>
+                        <div>[ Tech. Support ]</div>
+                        <ul>
+                            <li>- RML</li>
+                            <li>&emsp;유재석 fbwotjr94@gmail.com</li>
+                            <li>&emsp;서울시 노원구 광운로 1길 60 누리관 3층</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <div>
+                        <div>[ Location ]</div>
+                        <ul>
+                            <li>- Kwang Woon Univ.</li>
+                            <li>&emsp;02-940-5114</li>
+                            <li>&emsp;서울시 노원구 광운로 20</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="contain row">
+                <ul class="prof col-lg-7">
+                    <li>Robot Media Lab</li>
+                    <li>Head Manager : 박광현 / 서울시 노원구 광운로 1길 60 누리관 3층 / akaii@kw.ac.kr</li>
+                    <li>Institution : Kwang Woon Univ. / 서울시 노원구 광운로 20 / 02-940-5114</li>
+                </ul>
+                <div class="RML col-lg-4">
+                    <img src="../img/RML.png">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery.countdown.min.js"></script>
+        <script src="../js/jquery.nice-select.min.js"></script>
+        <script src="../js/jquery.zoom.min.js"></script>
+        <script src="../js/jquery.dd.min.js"></script>
+        <script src="../js/jquery.slicknav.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/main.js"></script>
+</body>
+
+</html>
